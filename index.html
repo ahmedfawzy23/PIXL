@@ -9,13 +9,19 @@
     <title>PIXL</title>
 </head>
 
-<body class="p-2 bg-pixl-dark text-pixl-light">
-    <h1>Hello, Vite.</h1>
-    <div class="flex gap-2 mt-2">
-        <div class="size-8 bg-pixl"></div>
-        <div class="size-8 bg-pixl-light"></div>
-        <div class="size-8 bg-pixl-dark"></div>
+<body class="bg-pixl-dark text-pixl-light h-dvh w-full overflow-clip">
+    <div class="absolute inset-0 overflow-clip">
+        <img src="/images/Official-Login-BG.png" alt=""
+            class="w-full h-full absolute inset-y-0 left-[15%] mask-l-from-80% object-cover opacity-30">
     </div>
+    <footer class="fixed bottom-0 inset-x-0 pb-3">
+        <div class="flex flex-col gap-1.5 items-center text-pixl p-4">
+            <p>All rights reserved, Pixl Media For Everyone*</p>
+            <p class="opacity-50 text-xs">*except .net & nodejs "farmers", please elevate to PHP.</p>
+        </div>
+        <!-- white noise -->
+        <div class="absolute bottom-0 h-4 inset-x-0  bg-[url(/images/white-noise.gif)]"></div>
+    </footer>
 </body>
 
 </html>
