@@ -119,10 +119,8 @@
 
     <footer class="relative pb-3 md:fixed md:inset-x-0 md:bottom-0">
         <div class="text-pixl flex flex-col items-center gap-1.5 p-4 text-center">
-            <p>All Rights Reserved. Pixl Media For Everyone*</p>
-            <p class="text-xs opacity-50">
-                *except for badgers, they’re $&@*holes.
-            </p>
+            <p>All rights reserved, Pixl Media For Everyone*</p>
+            <p class="opacity-50 text-xs">*except .net & nodejs "farmers", please elevate to PHP.</p>
         </div>
         <!-- White noise -->
         <div class="absolute inset-x-0 bottom-0 h-4 bg-[url(/images/white-noise.gif)]"></div>
