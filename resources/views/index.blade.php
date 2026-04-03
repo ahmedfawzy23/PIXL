@@ -123,7 +123,7 @@
             <p class="opacity-50 text-xs">*except .net & nodejs "farmers", please elevate to PHP.</p>
         </div>
         <!-- White noise -->
-        <div class="absolute inset-x-0 bottom-0 h-4 bg-[url(/public/images/white-noise.gif)]"></div>
+        <div class="absolute inset-x-0 bottom-0 h-4 bg-[url(/resources/images/white-noise.gif)]"></div>
         <!-- Pictogram -->
         <svg class="absolute right-4 bottom-8 w-7 grayscale max-sm:hidden" viewBox="0 0 29 43"
             xmlns="http://www.w3.org/2000/svg" fill="none">

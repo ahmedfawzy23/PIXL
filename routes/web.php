@@ -24,6 +24,20 @@ Route::get('/feed', function () {
             'likesCount' => 23,
             'repliesCount' => 45,
             'repostsCount' => 151,
+            'replies' => [
+                [
+                    'postedDateTime' => '1h',
+                    'profile' => [
+                        'displayName' => 'Ahmed',
+                        'handle' => '@ahmed_23',
+                        'avatar' => 'images/mr-anderson.png',
+                    ],
+                    'content' => '<p>I made this! <a href="#">#myartwork</a> <a href="#">#pixl</a></p>',
+                    'likesCount' => 23,
+                    'repliesCount' => 45,
+                    'repostsCount' => 151,
+                ]
+            ]
         ]
     ]));
     return view('feed', compact('feedItems'));
@@ -41,6 +55,20 @@ Route::get('/profile', function () {
             'likesCount' => 23,
             'repliesCount' => 45,
             'repostsCount' => 151,
+            'replies' => [
+                [
+                    'postedDateTime' => '1h',
+                    'profile' => [
+                        'displayName' => 'Ahmed',
+                        'handle' => '@ahmed_23',
+                        'avatar' => 'images/mr-anderson.png',
+                    ],
+                    'content' => '<p>I made this! <a href="#">#myartwork</a> <a href="#">#pixl</a></p>',
+                    'likesCount' => 23,
+                    'repliesCount' => 45,
+                    'repostsCount' => 151,
+                ]
+            ]
         ]
     ]));
     return view('profile', compact('feedItems'));
