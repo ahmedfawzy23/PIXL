@@ -41,4 +41,24 @@ class Post extends Model
     {
         return $this->hasMany(Post::class, 'repost_of_id');
     }
+
+    public static function publish(Profile $profile, $content): self
+    {
+        return static::create([
+            'profile_id' => $profile->id,
+            'content' =>  $content,
+            'parent_id' => null,
+            'repost_of_id' => null
+        ]);
+    }
+
+    public static function replay(Profile $profile, Post $original, $content): self
+    {
+        return static::create([
+            'profile_id' => $profile->id,
+            'content' =>  $content,
+            'parent_id' => $original->id,
+            'repost_of_id' => null
+        ]);
+    }
 }
