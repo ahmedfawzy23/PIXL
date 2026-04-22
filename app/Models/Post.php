@@ -37,6 +37,10 @@ class Post extends Model
         return $this->hasMany(Like::class);
     }
 
+    public function repostof(): BelongsTo
+    {
+        return $this->belongsTo(Post::class, 'repost_of_id');
+    }
     public function reposts(): HasMany
     {
         return $this->hasMany(Post::class, 'repost_of_id');
@@ -60,5 +64,22 @@ class Post extends Model
             'parent_id' => $original->id,
             'repost_of_id' => null
         ]);
+    }
+    public static function repost(Profile $profile, Post $original, $content = null): self
+    {
+        return static::firstOrCreate([
+            'profile_id' => $profile->id,
+            'content' =>  $content,
+            'parent_id' => null,
+            'repost_of_id' => $original->id
+        ]);
+    }
+
+    public static function removeRepost(Profile $profile, Post $original): bool
+    {
+        return static::where([
+            'profile_id' => $profile->id,
+            'repost_of_id' => $original->id
+        ])->delete() > 0;
     }
 }
